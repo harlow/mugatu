@@ -1,0 +1,1 @@
+require 'active_model/forbidden_methods_protection'
