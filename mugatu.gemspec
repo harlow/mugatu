@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Mugatu::VERSION
   s.authors     = ["Harlow Ward"]
   s.email       = ["harlow@hward.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/harlow/mugatu"
   s.summary     = "Restricts instance methods on ActiveRecord models"
   s.description = ""
 
