@@ -3,36 +3,17 @@ module ActiveModel
   end
 
   module ForbiddenMethodsProtection
-    def self.included(base)
-      base.extend ClassMethods
-      base.overwrite_initialize(base)
+    extend ActiveSupport::Concern
 
-      base.instance_eval do
-        def method_added(name)
-          return if name != :initialize
-          overwrite_initialize(base)
-        end
-      end
+    included do
+      after_initialize :reject_instance_metods
     end
 
-    module ClassMethods
-      def overwrite_initialize(base)
-        class_eval do
-          unless method_defined?(:custom_initialize)
-            define_method(:custom_initialize) do
-              unless base.instance_methods(false).size == 1
-                raise ActiveModel::ForbiddenMethods
-              end
+    def reject_instance_metods
+      self.class.name.constantize.instance_methods(false).each do |method|
+        next if method.to_s.start_with?('_')
 
-              original_initialize
-            end
-          end
-
-          if instance_method(:initialize) != instance_method(:custom_initialize)
-            alias_method :original_initialize, :initialize
-            alias_method :initialize, :custom_initialize
-          end
-        end
+        raise ActiveModel::ForbiddenMethods
       end
     end
   end

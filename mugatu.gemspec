@@ -15,5 +15,8 @@ Gem::Specification.new do |s|
 
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
+  s.add_development_dependency "activerecord"
+  s.add_development_dependency "database_cleaner"
   s.add_development_dependency "rspec"
+  s.add_development_dependency "sqlite3"
 end
