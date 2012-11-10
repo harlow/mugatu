@@ -1,3 +1,22 @@
-= Mugatu
+# Introduction
 
-This project rocks and uses MIT-LICENSE.
+In an effort to follow [SRP](http://www.oodesign.com/single-responsibility-principle.html) and combat [Fat Models](http://en.oreilly.com/rails2011/public/schedule/detail/18514).
+
+    class Person < ActiveRecord::Base
+      # This will raise an ActiveModel::ForbiddenMethods exception because it's an
+      # instance method on your ActiveRecord class
+      def full_name
+      end
+    end
+
+## Installation
+
+Add to Gemfile and run `bundle`
+
+    # Gemfile
+    gem 'mugatu'
+
+Create an initializer to include mugatu module in all Active Record objects
+
+    # config/initializers/mugatu.rb
+    ActiveRecord::Base.send :include, ActiveModel::ForbiddenMethodsProtection
