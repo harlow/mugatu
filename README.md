@@ -1,6 +1,6 @@
 # Introduction
 
-In an effort to follow [Single Responsibility Principle](http://www.oodesign.com/single-responsibility-principle.html) and combat [Fat Models](http://en.oreilly.com/rails2011/public/schedule/detail/18514) This Gem will throw an `ActiveModel::ForbiddenMethods` exception when instance methods are added to any ActiveRecord models.
+In an effort to follow [Single Responsibility Principle](http://www.oodesign.com/single-responsibility-principle.html) and combat [Fat Models](http://en.oreilly.com/rails2011/public/schedule/detail/18514). This Gem will throw an `ActiveModel::ForbiddenMethods` exception when instance methods are added to any ActiveRecord models.
 
     class Person < ActiveRecord::Base
       # This will raise an ActiveModel::ForbiddenMethods exception because it's an
