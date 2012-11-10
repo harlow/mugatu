@@ -1,6 +1,10 @@
-# Introduction
+# Mugatu
 
-In an effort to follow [Single Responsibility Principle](http://www.oodesign.com/single-responsibility-principle.html) and combat [Fat Models](http://en.oreilly.com/rails2011/public/schedule/detail/18514). This Gem will throw an `ActiveModel::ForbiddenMethods` exception when instance methods are added to any ActiveRecord models.
+_* WARNING: This is an experimental Gem and should not be used in production codebases *_
+
+## Introduction
+
+In an effort to follow [Single Responsibility Principle](http://www.oodesign.com/single-responsibility-principle.html) and combat [Fat Models](http://en.oreilly.com/rails2011/public/schedule/detail/18514), this Gem will throw an `ActiveModel::ForbiddenMethods` exception when instance methods are added to any of your ActiveRecord models.
 
     class Person < ActiveRecord::Base
       # This will raise an ActiveModel::ForbiddenMethods exception because it's an
