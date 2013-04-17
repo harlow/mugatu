@@ -1,10 +1,12 @@
 # Mugatu
 
-_* WARNING: This is an experimental Gem and should not be used in production codebases *_
+_Experimental Gem used to keep your models skinny. Don't use it in anything you care about._
+
+![mugatu](http://www.brobible.com/files/uploads/images/bro-life/mugatu.jpg)
 
 ## Introduction
 
-In an effort to follow [Single Responsibility Principle](http://www.oodesign.com/single-responsibility-principle.html) and combat [Fat Models](http://en.oreilly.com/rails2011/public/schedule/detail/18514), this Gem will throw an `ActiveModel::ForbiddenMethods` exception when instance methods are added to any of your ActiveRecord models.
+In an effort to follow [Single Responsibility Principle](http://www.oodesign.com/single-responsibility-principle.html) and combat [Fat Models](http://en.oreilly.com/rails2011/public/schedule/detail/18514), Mugatu will throw an `ActiveModel::ForbiddenMethods` hissy-fit (exception) when instance methods are added to any of your ActiveRecord models.
 
     class Person < ActiveRecord::Base
       # This will raise an ActiveModel::ForbiddenMethods exception because it's an
