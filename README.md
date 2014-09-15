@@ -26,7 +26,7 @@ Add to Gemfile and run `bundle`
 group :development, :test do
   gem 'mugatu'
 end
-``
+```
 
 Create an initializer to include mugatu module in all Active Record objects
 
