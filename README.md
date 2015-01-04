@@ -2,7 +2,7 @@
 
 _Experimental Gem used to keep your models skinny. Don't use it in anything you care about._
 
-![mugatu](http://www.brobible.com/files/uploads/images/bro-life/mugatu.jpg)
+![mugatu](https://cloud.githubusercontent.com/assets/739782/5604928/4e88e5bc-9394-11e4-815b-3127c727ebe3.jpg)
 
 ## Introduction
 
